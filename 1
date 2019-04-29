@@ -1,0 +1,33 @@
+int main() 
+{
+	while(analog(0) < 2300) 
+		{	
+   		 if (analog(1) >3000)
+       	 	{
+            	motor(0,-50);
+            	motor(3,-40);
+       		 }
+        else
+        	{
+           		motor(0,-40);
+           		motor(3,-50);
+        	}
+
+  		}
+    ao();
+    //wack firefighters
+    set_servo_position(0,0);
+    msleep(1000);
+    set_servo_position(0,1000);
+    msleep(1000);
+    set_servo_position(0,0);
+    msleep(1000);
+    set_servo_position(0,1000);
+    msleep(1000);
+    set_servo_position(0,0);
+    msleep(1000);
+    set_servo_position(0,1000);
+    msleep(1000);
+ao();						
+return 0; 
+}
